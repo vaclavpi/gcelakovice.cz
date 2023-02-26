@@ -281,7 +281,7 @@ li {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400) {
   .topnav li a{display: none;}
   .topnav li .dropdownNAV-btn i{display: none;}
   .topnav .icon {
@@ -290,7 +290,7 @@ li {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400) {
   .topnav .responsive{position: relative;}
   .topnav .responsive .icon {
     position: absolute;
