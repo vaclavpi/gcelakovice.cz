@@ -192,21 +192,15 @@ li {
     display: none;
   }
   .header-image{
-    align-items: center;
-    transform: translateX(200%);
-    align-items: center;
-    
-    
+    align-items: center;    
   }
 
   .popis .nazev .title{
-    align-items: center;
-    transform: translateY(100%);
+    display: none;
   }
 
   .popis .nazev .subtitle{
-    align-items: center;
-    transform: translateY(300%);
+    display: none;
   }
 }
 
