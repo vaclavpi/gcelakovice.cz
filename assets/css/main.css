@@ -188,9 +188,7 @@ li {
 }
 
 @media screen and (max-width: 500px) {
-  #header nav{
-    display: none;
-  }
+  #header nav{display: none;}
   
 }
 
