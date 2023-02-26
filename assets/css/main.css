@@ -188,20 +188,10 @@ li {
 }
 
 @media screen and (max-width: 500px) {
-    #header>nav {
-    display: none;
-  }
-  .header-image{
-    align-items: center;    
-  }
-
-  .popis .nazev .title{
-    display: none;
-  }
-
-  .popis .nazev .subtitle{
-    display: none;
-  }
+    #header>nav {display: none;}
+    .header-image{align-items: center;}
+    .popis .nazev .title{display: none;}
+    .popis .nazev .subtitle{display: none;}
 }
 
 #header {
