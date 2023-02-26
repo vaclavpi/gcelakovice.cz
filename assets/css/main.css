@@ -188,7 +188,7 @@ li {
 }
 
 @media screen and (max-width: 500px) {
-    #header>nav>ul>li>a{
+    #header>nav {
     display: none;
   }
   .header-image{
