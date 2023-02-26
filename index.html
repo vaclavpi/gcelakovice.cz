@@ -14,9 +14,10 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="novinkyIndex.js"></script>
-    <script src="/assets/js/dropdown-btn.js"></script>
-    <script src="/assets/js/dropdown-btnNAV.js"></script>
-    <script src="/assets/js/search.js"></script>
+    <script src="/gcelakovice.cz/assets/js/dropdown-btn.js"></script>
+    <script src="/gcelakovice.cz/assets/js/dropdown-btnNAV.js"></script>
+    <script src="/gcelakovice.cz/assets/js/search.js"></script>
+    
     
 
     <!--Open Graph Tags-->
@@ -108,7 +109,7 @@
 
 <div class="slideshow-container">
     <div class="mySlides">
-        <img src="assets/img/budova.jpg">
+        <img src="https://github.com/vaclavpi/gcelakovice.cz/blob/main/assets/img/budova.jpg?raw=true">
         <div class="slide-description">
             <h1>Budova naší školy</h1>
             <p>Naše škola má skvělé zázemí v prvním patře této moderní budovy.</p>
@@ -118,7 +119,7 @@
         </div>
     </div>
 
-    <script src="/assets/js/slideshow.js"></script>
+    <script src="/gcelakovice.cz/assets/img/zájezdy.png"></script>
     <div class="mySlides">
         <img src="assets/img/zájezdy.png">
         <div class="slide-description">
@@ -133,6 +134,31 @@
     <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-circle-right"></i></a>
 </div>
 
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+</script>
 
 
 <!--Novinky-->
