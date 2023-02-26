@@ -188,9 +188,26 @@ li {
 }
 
 @media screen and (max-width: 500px) {
-  .header-image{display: none;}
-  #header nav{display: none;}
-  
+    #header>nav>ul>li>a{
+    display: none;
+  }
+  .header-image{
+    align-items: center;
+    transform: translateX(200%);
+    align-items: center;
+    
+    
+  }
+
+  .popis .nazev .title{
+    align-items: center;
+    transform: translateY(100%);
+  }
+
+  .popis .nazev .subtitle{
+    align-items: center;
+    transform: translateY(300%);
+  }
 }
 
 #header {
