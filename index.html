@@ -67,27 +67,42 @@
                 </a></li>
         </ul>
         <ul><br><br><br><br>
-            <li><a href="index.html">Úvod</a></li>
-            <li>
-                <div class="dropdownNAV">
-                    <button class="dropdownNAV-btn">
-                        <i>O škole <i class="fa-solid fa-caret-down"></i></i>
-                    </button>
-                    <div class="dropdownNAV-content">
-                        <a href="#">Odkaz 1</a>
-                        <a href="#">Odkaz 2</a>
-                        <a href="#">Odkaz 3</a>
+            <div class="topnav" id="myTopnav">
+                <li><a href="index.html">Úvod</a></li>
+                <li>
+                    <div class="dropdownNAV">
+                        <button class="dropdownNAV-btn">
+                            <i>O škole <i class="fa-solid fa-caret-down"></i></i>
+                        </button>
+                        <div class="dropdownNAV-content">
+                            <a href="#">Odkaz 1</a>
+                            <a href="#">Odkaz 2</a>
+                            <a href="#">Odkaz 3</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li><a href="XXXXXXXXX">Novinky</a></li>
-            <li><a href="XXXXXXXXX">Ze života školy</a></li>
-            <li><a href="XXXXXXXXX">Pro uchazeče</a></li>
-            <li><a href="XXXXXXXXX">Pro veřejnost</a></li>
-            <li><a href="XXXXXXXXX">Kontakty</a></li>
-            <li><a href="XXXXXXXXX">Maturita</a></li>
+                </li>
+                <li><a href="XXXXXXXXX">Novinky</a></li>
+                <li><a href="XXXXXXXXX">Ze života školy</a></li>
+                <li><a href="XXXXXXXXX">Pro uchazeče</a></li>
+                <li><a href="XXXXXXXXX">Pro veřejnost</a></li>
+                <li><a href="XXXXXXXXX">Kontakty</a></li>
+                <li><a href="XXXXXXXXX">Maturita</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i></a></li>
+            </div>
 
-            <li>
+            <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                x.className += " responsive";
+                } else {
+                x.className = "topnav";
+                }
+            }
+            </script>
+
+
                 <div class="dropdown">
                     <button class="dropdown-btn">
                         <i class="fa-solid fa-magnifying-glass"></i>
