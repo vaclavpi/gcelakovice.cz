@@ -269,12 +269,7 @@ li {
 
 }
 
-@media screen and (max-width: 500px) {
-  .news-container{
-    border-left: 0px;
-    border-right: 0px;
-  }
-}
+
 
 
 .news-container h1 {
@@ -353,12 +348,18 @@ li {
 .news-containerIndex {
   background-color: #fff;
   display: inline-block;
-  border-left: 70px solid #edebeb;
-  padding: 10px;
-  border-right: 70px solid #edebeb;
-  padding: 10px;
-
 }
+
+
+@media screen and (min-width: 500px) {
+  .news-containerIndex{
+    border-left: 70px solid #edebeb;
+    padding: 10px;
+    border-right: 70px solid #edebeb;
+    padding: 10px;
+  }
+}
+
 
 .news-containerIndex h1 {
   font-size: 44px;
