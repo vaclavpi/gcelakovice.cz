@@ -187,27 +187,11 @@ li {
   display: block;
 }
 
-@media screen and (max-width: 360px) {
-  .header-image{
-    align-items: center;
-    transform: translateX(200%);
-    align-items: center;
-    
-    
-  }
-  #header>nav>ul{
+@media screen and (max-width: 400px) {
+  #header nav{
     display: none;
   }
-
-  .popis .nazev .title{
-    align-items: center;
-    transform: translateY(100%);
-  }
-
-  .popis .nazev .subtitle{
-    align-items: center;
-    transform: translateY(300%);
-  }
+  
 }
 
 #header {
