@@ -188,10 +188,8 @@ li {
 }
 
 @media screen and (max-width: 500px) {
-    #header>nav {display: none;}
-    .header-image{display: block; margin-left: 200%; margin-right: auto; }
-    .popis .nazev .title{display: none;}
-    .popis .nazev .subtitle{display: none;}
+    #header>nav>ul>.zak>a {display: none;}
+
 }
 
 #header {
@@ -256,6 +254,12 @@ li {
   font-size: 15px;
   text-decoration: none;
 }
+
+@media screen and (max-width: 500px){
+
+}
+  
+
 
 
 /*Novinky*/
