@@ -269,6 +269,14 @@ li {
 
 }
 
+@media screen and (max-width: 500px) {
+  .news-container{
+    border-left: 0px;
+    border-right: 0px;
+  }
+}
+
+
 .news-container h1 {
   font-size: 44px;
   text-align: center;
