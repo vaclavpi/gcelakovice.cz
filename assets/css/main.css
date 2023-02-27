@@ -730,3 +730,11 @@ button {
   transform: translateX(0%);
 }
 
+
+@media screen and (max-width: 450px){
+  
+}
+
+iframe{
+  width: 100%;
+}
