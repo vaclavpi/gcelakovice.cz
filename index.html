@@ -16,169 +16,255 @@
     <script src="/gcelakovice.cz/assets/js/dropdown-btn.js"></script>
     <script src="/gcelakovice.cz/assets/js/dropdown-btnNAV.js"></script>
     <script src="/gcelakovice.cz/assets/js/search.js"></script>
-    
-    
+
+
 
     <!--Open Graph Tags-->
     <meta property="og:title" content="Gymnázium Čelákovice" />
     <meta property="og:image" content="/gcelakovice.cz/assets/img/ogimage.png" />
     <meta property="og:description"
         content="Fakultní škola FF UK Praha Gymnázium Čelákovice je škola s 25 letou tradicí. Jsme škola menšího charakteru s rodinnou atmosférou. Nacházíme se v nové budově společně se základní školou v centru města. Na gymnáziu lze studovat v osmiletém i čtyřletém cyklu. Během studia se mohou studenti zapojit do různých projektů regionálního i mezinárodního charakteru. Jsme držiteli jazykových i jiných ocenění. Pro další informace nás lze kontaktovat telefonicky či elektronicky." />
-</head>
 
-<header id="header">
-    <a href="index.html">
-        <div class="zoom-on-hover"><img class="header-image" alt="Gymnázium Čelákovice"
-                src="assets/img/logo_small_white.png" /></div>
-    </a>
 
-    <div class="popis">
-        <div class="nazev">
-            <div class="zoom-on-hover">
-                <a href="index.html" class="title">Gymnázium Čelákovice</a>
+    <header>
+        <nav class="NAVIG">
+            <div class="navbar">
+                <header id="header">
+                    <a href="index.html">
+                        <div class="zoom-on-hover"><img class="header-image" alt="Gymnázium Čelákovice"
+                                src="assets/img/logo_small_white.png" /></div>
+                    </a>
+
+                    <div class="popis">
+                        <div class="nazev">
+                            <div class="zoom-on-hover">
+                                <a href="index.html" class="title">Gymnázium Čelákovice</a>
+                            </div>
+                            <a href="https://mapy.cz/s/kanurejalu" class="subtitle">J.A. Komenského 414, 250 88,
+                                Čelákovice</a>
+                        </div>
+                    </div>
+                </header>
+
+                <ul class="nav-links">
+                    <li class="zak"><a href="tel:326929011"><i class="fa-solid fa-phone"></i>
+                            <p>Telefonní číslo</p>
+                        </a></li>
+                    <li class="zak"><a href="mailto:info@gcelakovice.cz"><i class="fa-solid fa-envelope"></i>
+                            <p>E-mail</p>
+                        </a></li>
+                    <li class="zak"><a href="index.html"><i class="fa-regular fa-calendar-days"></i>
+                            <p>Kalendář akcí</p>
+                        </a></li>
+                    <li class="zak"><a
+                            href="https://aplikace.skolaonline.cz/SOL/App/Spolecne/KZZ010_RychlyPrehled.aspx"><i
+                                class="fa-solid fa-school-circle-exclamation"></i>
+                            <p>ŠkolaOnline</p>
+                        </a></li>
+                    <li class="zak"><a href="https://www.strava.cz/strava5/Jidelnicky?zarizeni=0005"><i
+                                class="fa-solid fa-burger"></i>
+                            <p>Jídelníček</p>
+                        </a></li>
+                    <li><a href="#">Domů</a></li>
+                    <li><a href="#">O Škole</a></li>
+                    <li><a href="#">Organizace</a></li>
+                    <li><a href="#">Maturanti</a></li>
+                    <button class="close-btn">×</button>
+                    <div class="dropdownNAV">
+                        <button class="dropdownNAV-btn">
+                            <i>O škole <i class="fa-solid fa-caret-down"></i></i>
+                        </button>
+                        <div class="dropdownNAV-content">
+                            <a href="#">Odkaz 1</a>
+                            <a href="#">Odkaz 2</a>
+                            <a href="#">Odkaz 3</a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <form>
+                                <input type="text" id="search" placeholder="Vyhledat...">
+                                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                </ul>
+                <div class="burger">
+                    <i class="fa-solid fa-bars" style="font-size: 25px;"></i>
+                </div>
+
+
             </div>
-            <a href="https://mapy.cz/s/kanurejalu" class="subtitle">J.A. Komenského 414, 250 88, Čelákovice</a>
+        </nav>
+
+
+
+        <script>
+            const navSlide = () => {
+                const burger = document.querySelector('.burger');
+                const nav = document.querySelector('.nav-links');
+                const navLinks = document.querySelectorAll('.nav-links li');
+
+                burger.addEventListener('click', () => {
+                    nav.classList.toggle('nav-active');
+
+                    navLinks.forEach((link, index) => {
+                        if (link.style.animation) {
+                            link.style.animation = '';
+                        } else {
+                            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                        }
+                    });
+
+                    burger.classList.toggle('toggle');
+                });
+            };
+
+            navSlide();
+
+
+        </script>
+
+        <script>
+            const closeBtn = document.querySelector('.close-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            closeBtn.addEventListener('click', () => {
+            navLinks.style.transform = 'translateX(100%)';
+            });
+        </script>
+    </header>
+
+
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="https://raw.githubusercontent.com/vaclavpi/gcelakovice.cz/main/assets/img/budova.jpg">
+            <div class="slide-description">
+                <h1>Budova naší školy</h1>
+                <p>Naše škola má skvělé zázemí v prvním patře této moderní budovy.</p>
+            </div>
+            <div class="slide-button">
+                <a href="#########"><button>To mě zajímá!</button></a>
+            </div>
         </div>
-    </div>
-    </div>
-    </div>
-    <nav>
-        <ul>
-            <li class="zak"><a href="tel:326929011"><i class="fa-solid fa-phone"></i>
-                    <p>Telefonní číslo</p>
-                </a></li>
-            <li class="zak"><a href="mailto:info@gcelakovice.cz"><i class="fa-solid fa-envelope"></i>
-                    <p>E-mail</p>
-                </a></li>
-            <li class="zak"><a href="index.html"><i class="fa-regular fa-calendar-days"></i>
-                    <p>Kalendář akcí</p>
-                </a></li>
-            <li class="zak"><a href="https://aplikace.skolaonline.cz/SOL/App/Spolecne/KZZ010_RychlyPrehled.aspx"><i
-                        class="fa-solid fa-school-circle-exclamation"></i>
-                    <p>ŠkolaOnline</p>
-                </a></li>
-            <li class="zak"><a href="https://www.strava.cz/strava5/Jidelnicky?zarizeni=0005"><i
-                        class="fa-solid fa-burger"></i>
-                    <p>Jídelníček</p>
-                </a></li>
-        </ul>
-        <ul><br><br><br><br>
-            <li><a href="index.html">Úvod</a></li>
-            <li>
-                <div class="dropdownNAV">
-                    <button class="dropdownNAV-btn">
-                        <i>O škole <i class="fa-solid fa-caret-down"></i></i>
-                    </button>
-                    <div class="dropdownNAV-content">
-                        <a href="#">Odkaz 1</a>
-                        <a href="#">Odkaz 2</a>
-                        <a href="#">Odkaz 3</a>
-                    </div>
-                </div>
-            </li>
-            <li><a href="XXXXXXXXX">Novinky</a></li>
-            <li><a href="XXXXXXXXX">Ze života školy</a></li>
-            <li><a href="XXXXXXXXX">Pro uchazeče</a></li>
-            <li><a href="XXXXXXXXX">Pro veřejnost</a></li>
-            <li><a href="XXXXXXXXX">Kontakty</a></li>
-            <li><a href="XXXXXXXXX">Maturita</a></li>
-
-
-                <div class="dropdown">
-                    <button class="dropdown-btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <form>
-                            <input type="text" id="search" placeholder="Vyhledat...">
-                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                    </div>
-                </div>
-
-            </li>
-        </ul>
-    </nav>
-</header>
-
-
-
-<div class="slideshow-container">
-    <div class="mySlides">
-        <img src="https://raw.githubusercontent.com/vaclavpi/gcelakovice.cz/main/assets/img/budova.jpg">
-        <div class="slide-description">
-            <h1>Budova naší školy</h1>
-            <p>Naše škola má skvělé zázemí v prvním patře této moderní budovy.</p>
+        <div class="mySlides">
+            <img src="https://raw.githubusercontent.com/vaclavpi/gcelakovice.cz/main/assets/img/z%C3%A1jezdy.png">
+            <div class="slide-description">
+                <h1>Jezdíme na zájezdy</h1>
+                <p>Nejen do Vídně, Anglie, ale i do Španělska a dál.</p>
+            </div>
+            <div class="slide-button">
+                <a href="#########"><button>To mě zajímá!</button></a>
+            </div>
         </div>
-        <div class="slide-button">
-            <a href="#########"><button>To mě zajímá!</button></a>
-        </div>
+        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-circle-left"></i></a>
+        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-circle-right"></i></a>
     </div>
-    <div class="mySlides">
-        <img src="https://raw.githubusercontent.com/vaclavpi/gcelakovice.cz/main/assets/img/z%C3%A1jezdy.png">
-        <div class="slide-description">
-            <h1>Jezdíme na zájezdy</h1>
-            <p>Nejen do Vídně, Anglie, ale i do Španělska a dál.</p>
-        </div>
-        <div class="slide-button">
-            <a href="#########"><button>To mě zajímá!</button></a>
-        </div>
-    </div>
-    <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-circle-left"></i></a>
-    <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-circle-right"></i></a>
-</div>
 
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
         }
-        slides[slideIndex - 1].style.display = "block";
-    }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
 
 
-</script>
+    </script>
 
 
-<!--Novinky-->
+    <!--Novinky-->
 
 
-<div class="news-containerIndex">
-    <br>
-    <h1><i class="fa-solid fa-newspaper"></i> Novinky</h1>
-    <br>
-    <hr><br>
-    <div class="news-rowIndex">
-        <div id="aktuality"></div>
+    <div class="news-containerIndex">
+        <br>
+        <h1><i class="fa-solid fa-newspaper"></i> Novinky</h1>
+        <br>
+        <hr><br>
+        <div class="news-rowIndex">
+            <div id="aktuality"></div>
+        </div>
+        <br><br>
+        <hr>
+        <div class="vice"><a href="XXXXXXXXXXXXXXXXXXXXXXXX">Více</a></div>
     </div>
-    <br><br>
-    <hr>
-    <div class="vice"><a href="XXXXXXXXXXXXXXXXXXXXXXXX">Více</a></div>
-</div>
 
 
-<footer>
-    <div class="footer-container">
-        <p>© 2023 Gymnázium Čelákovice » </p>
-        <a href="XXXXXXXXXXXXXXX">O stránce</a>
-        <li><a href="https://www.facebook.com/profile.php?id=100057309495212" class="fab fa-facebook"></a></li>
-        <li><a href="mailto:info@gcelakovice.cz" class="fa-solid fa-envelope"></a></li>
-        <li><a href="tel:326929011" class="fa-solid fa-phone"></a></li>
-    </div>
-</footer>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "novinky.xml",
+                dataType: "xml",
+                success: function (xml) {
+                    var aktualitaCount = $(xml).find('aktualita').length;
+                    var aktualityTable = $('<table>').addClass('aktuality-table');
+                    var aktualitaIndex = 0;
+                    $(xml).find('aktualita').sort(function (a, b) {
+                        var aDate = new Date($(a).find('datum').text());
+                        var bDate = new Date($(b).find('datum').text());
+                        return bDate - aDate;
+                    }).each(function () {
+                        if (aktualitaIndex < 6) {
+                            var nadpis = $(this).find('nadpis').text();
+                            var shrnuti = $(this).find('shrnuti').text();
+                            var odkaz = $(this).find('odkaz').text();
+                            var dale = $(this).find('dale').text();
+                            var obrazky = $(this).find('obrazek').map(function () {
+                                return $(this).text();
+                            }).get();
+                            var obrazek = obrazky.length > 0 ? obrazky[0] : "";
+                            var tr;
+                            var trNadpis = $('<tr>').addClass('nadpis').html('<a href="' + odkaz + '">' + '<h2>' + nadpis + '</h2></a>');
+                            var trShrnuti = $('<tr>').addClass('shrnuti').text(shrnuti);
+                            var trObrazek = $('<tr>').addClass('obrazek').html('<img src="' + obrazek + '">');
+                            var trDale = $('<tr>').addClass('dale').html('<a href="' + odkaz + '">' + dale + '</a>');
+                            if (aktualitaIndex % 3 == 0) {
+                                td = $('<td>');
+                                td.append(trNadpis, trShrnuti, trDale, trObrazek);
+                                aktualityTable.append(td);
+                            } else {
+                                td = aktualityTable.find('td:last');
+                                td.append(trNadpis, trShrnuti, trDale, trObrazek);
+                            }
+                            aktualitaIndex++;
+                        }
+                    });
+                    $('#aktuality').append(aktualityTable);
+                }
+            });
+        });
+
+    </script>
+
+    <footer>
+        <div class="footer-container">
+            <p>© 2023 Gymnázium Čelákovice » </p>
+            <a href="XXXXXXXXXXXXXXX">O stránce</a>
+            <li><a href="https://www.facebook.com/profile.php?id=100057309495212" class="fab fa-facebook"></a></li>
+            <li><a href="mailto:info@gcelakovice.cz" class="fa-solid fa-envelope"></a></li>
+            <li><a href="tel:326929011" class="fa-solid fa-phone"></a></li>
+        </div>
+    </footer>
