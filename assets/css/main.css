@@ -131,16 +131,12 @@ li {
 
   .nav-links-zak .zak{
     display: inline-block;
-  margin-left: 10px; /* Prostor mezi ikonami */
   padding-top: 10%;
-  }
-  .nav-links-zak .zak:first-child {
-    margin-left: 0; /* Žádný prostor před první ikonou */
-  }
-
+  padding-right: 10%;  }
+  
   .nav-links-zak .zak i{
     display: inline-block;
-    margin-left: 19px; /* Prostor mezi ikonami */
+    margin-left: 15px; /* Prostor mezi ikonami */
     font-size: 30px;
     color: #fff;
   }
@@ -433,30 +429,14 @@ footer {
 
 }
 
-footer li {
-  display: inline-block;
-  margin-left: 1.0em;
-  padding: 0;
-  vertical-align: middle;
-  font-size: 20px;
-  color: #fff;
-  text-decoration: none;
-}
 
 footer a {
-  display: inline-block;
-  margin-left: 1.0em;
-  padding: 0;
-  vertical-align: middle;
   font-size: 20px;
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 footer p {
-  display: inline-block;
-  margin-left: 1.0em;
-  padding: 0;
   vertical-align: middle;
   font-size: 20px;
   color: #fff;
