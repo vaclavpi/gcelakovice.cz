@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description"
         content="Fakultní škola FF UK Praha Gymnázium Čelákovice je škola s 25 letou tradicí. Jsme škola menšího charakteru s rodinnou atmosférou. Nacházíme se v nové budově společně se základní školou v centru města. Na gymnáziu lze studovat v osmiletém i čtyřletém cyklu. Během studia se mohou studenti zapojit do různých projektů regionálního i mezinárodního charakteru. Jsme držiteli jazykových i jiných ocenění. Pro další informace nás lze kontaktovat telefonicky či elektronicky.">
-    <link rel="stylesheet" href="/gcelakovice.cz/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="icon" type="image/x-icon" href="/gcelakovice.cz/assets/img/logo_small_white.png">
     <script src="https://kit.fontawesome.com/303912b032.js" crossorigin="anonymous"></script>
 
@@ -42,17 +42,20 @@
                             </div>
                             <a href="https://mapy.cz/s/kanurejalu" class="subtitle">J.A. Komenského 414, 250 88,
                                 Čelákovice</a>
+                            <!-- Přidání ikony telefonu s telefonním číslem -->
+                                <a href="tel:326929011" class="contact-info">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <span>326 929 011</span>
+                                </a>
+                                <!-- Přidání ikony e-mailu s e-mailovou adresou -->
+                                <a href="mailto:info@gcelakovice.cz" class="contact-info">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <span>info@gcelakovice.cz</span>
+                                </a>
                         </div>
                     </div>
                 </header>
-
-                <ul class="nav-links">
-                    <li class="zak"><a href="tel:326929011"><i class="fa-solid fa-phone"></i>
-                            <p>Telefonní číslo</p>
-                        </a></li>
-                    <li class="zak"><a href="mailto:info@gcelakovice.cz"><i class="fa-solid fa-envelope"></i>
-                            <p>E-mail</p>
-                        </a></li>
+                <ul class="nav-links-zak">
                     <li class="zak"><a href="index.html"><i class="fa-regular fa-calendar-days"></i>
                             <p>Kalendář akcí</p>
                         </a></li>
@@ -64,7 +67,9 @@
                     <li class="zak"><a href="https://www.strava.cz/strava5/Jidelnicky?zarizeni=0005"><i
                                 class="fa-solid fa-burger"></i>
                             <p>Jídelníček</p>
-                        </a></li>
+                        </a></li></ul>
+
+                <ul class="nav-links">
                     <li><a href="#">Domů</a></li>
                     <li><a href="#">O Škole</a></li>
                     <li><a href="#">Organizace</a></li>
@@ -148,10 +153,11 @@
             <div class="slide-description">
                 <h1>Budova naší školy</h1>
                 <p>Naše škola má skvělé zázemí v prvním patře této moderní budovy.</p>
-            </div>
+            
             <div class="slide-button">
                 <a href="#########"><button>To mě zajímá!</button></a>
             </div>
+        </div>
         </div>
         <div class="mySlides">
             <img src="https://raw.githubusercontent.com/vaclavpi/gcelakovice.cz/main/assets/img/z%C3%A1jezdy.png">
@@ -259,12 +265,18 @@
 
     </script>
 
-    <footer>
-        <div class="footer-container">
-            <p>© 2023 Gymnázium Čelákovice » </p>
-            <a href="XXXXXXXXXXXXXXX">O stránce</a>
-            <li><a href="https://www.facebook.com/profile.php?id=100057309495212" class="fab fa-facebook"></a></li>
-            <li><a href="mailto:info@gcelakovice.cz" class="fa-solid fa-envelope"></a></li>
-            <li><a href="tel:326929011" class="fa-solid fa-phone"></a></li>
-        </div>
-    </footer>
+<footer>
+    <div class="footer-container">
+        <p>© 2023 Gymnázium Čelákovice » </p>
+        <a href="XXXXXXXXXXXXXXX">O stránce</a>
+        <li><a href="https://www.facebook.com/profile.php?id=100057309495212" class="fab fa-facebook"></a></li>
+        <li><a href="mailto:info@gcelakovice.cz" class="fa-solid fa-envelope"></a></li>
+        <li><a href="tel:326929011" class="fa-solid fa-phone"></a></li>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="<KEY>" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="<KEY>" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="<KEY>" crossorigin="anonymous"></script>
+</body>
+
+</html>

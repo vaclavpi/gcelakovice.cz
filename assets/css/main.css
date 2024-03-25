@@ -85,6 +85,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  min-width: auto;
 }
 
 article,
@@ -108,7 +109,7 @@ body {
 }
 
 img {
-  width: 99.999%;
+  width: 100%;
 }
 
 /* Header */
@@ -128,16 +129,26 @@ li {
 
 /* Nastavení navigace pro žáky */
 
-.zak i {
-  font-size: 30px;
-  color: #fff;
+  .nav-links-zak .zak{
+    display: inline-block;
+  margin-left: 10px; /* Prostor mezi ikonami */
+  padding-top: 10%;
+  }
+  .nav-links-zak .zak:first-child {
+    margin-left: 0; /* Žádný prostor před první ikonou */
+  }
 
-}
+  .nav-links-zak .zak i{
+    display: inline-block;
+    margin-left: 19px; /* Prostor mezi ikonami */
+    font-size: 30px;
+    color: #fff;
+  }
 
-.zak p {
+  .nav-links-zak .zak p {
   position: absolute;
   bottom: -20px;
-  left: 15%;
+  left: 50%;
   transform: translateX(-50%);
   transform: translateY(50%);
   white-space: nowrap;
@@ -146,6 +157,14 @@ li {
   font-size: 14px;
   border-radius: 5px;
   transition: opacity 0.2s ease-in-out;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  -o-transform: translateX(-50%);
 }
 
 .zak a:hover p {
@@ -187,6 +206,20 @@ li {
   display: block;
 }
 
+
+.popis .nazev .contact-info{
+  border: 0;
+  display: inline-block;
+  justify-content: center;  
+  color: #dbdbdb;
+  font-size: 15px;
+  padding-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+
 @media screen and (max-width: 500px) {
     #header>nav>ul>.zak>a {display: none;}
 
@@ -199,7 +232,7 @@ li {
   display: flex;
   background-color: #45AA67;
   cursor: default;
-  padding: 1.75em 2em;
+  padding-left: 2em;
 }
 
 
@@ -395,6 +428,7 @@ footer {
   font-size: 14px;
   padding: 20px;
   display: block;
+  width: auto;
 
 
 }
@@ -533,7 +567,6 @@ button {
 
 
 
-
 /*SLDE BLOCKY*/
 .slideshow-container {
   position: block;
@@ -548,27 +581,26 @@ button {
 }
 
 .mySlides img {
-  width: 99.999%;
+  width: 100%;
+  height: 50%;
   display: block;
-  height: auto;
 }
 
 .slide-description {
-  bottom: 0;
+  bottom: 110px;
+  position: relative; /* Přidáno */
+  display: flex; /* Přidáno */
   left: 0;
-  width: 99.999%;
+  width:  auto;
   background-color: rgba(69, 170, 103, 0.547);
   display: block;
   padding: 33px;
 }
 
 .slide-button {
-  bottom: 0;
-  left: 0;
-  width: 95%;
-  text-align: right;
-  padding: 33px;
-
+  position: absolute; /* Přidáno */
+  top: 25%; /* Přidáno */
+  right: 15%; /* Přidáno */
 }
 
 .slide-description h1 {
@@ -598,7 +630,7 @@ button {
 .prev,
 .next {
   position: absolute;
-  top: 50%;
+  top: 75%;
   transform: translateY(-50%);
   padding: 10px;
   font-size: 30px;
@@ -606,6 +638,10 @@ button {
   color: #45AA67;
   cursor: pointer;
   z-index: 1;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 
 .prev {
@@ -616,11 +652,7 @@ button {
   right: 0;
 }
 
-
-
-
 .NAVIG {
-
   background-color: #45AA67;
   color: #fff;
   cursor: default;
@@ -644,12 +676,17 @@ button {
   list-style: none;
 }
 
+.nav-links-zak {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .nav-links li {
   margin: 0px 10px;
   vertical-align: middle;
   display: inline-block;
   margin-left: 2%;
-
 }
 
 .nav-links a {
@@ -675,6 +712,7 @@ button {
 .close-btn{
   display: none;
 }
+
 @media screen and (max-width: 768px) {
   .nav-links {
     position: fixed;
@@ -686,7 +724,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+  
     transform: translateX(100%);
   }
 
@@ -725,14 +763,12 @@ button {
   }
 }
 
-
 .nav-active {
   transform: translateX(0%);
 }
 
-
 @media screen and (max-width: 450px){
-  
+  /* Přidejte zde responsivní styly podle potřeby */
 }
 
 iframe{
